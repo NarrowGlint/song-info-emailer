@@ -14,7 +14,7 @@ from selenium.common.exceptions import NoSuchElementException
 
 def program():
     obj = imaplib.IMAP4_SSL('imap.gmail.com', '993')  # Connect to an IMAP4 sever over SSL, port 993
-    obj.login('songreplier@gmail.com','ireplytosongs')  # Identify the client user and password
+    obj.login('EMAIL HERE','PASSWORD HERE')  # Identify the client user and password
     obj.select()  # Select a the 'INBOX' mailbox (default parameter)
     # Search mailbox no (None) charset, criterion:"UnSeen". Will return a tuple, grab the second part,
     # split each string into a list, and return the length of that list:
@@ -117,8 +117,8 @@ def program():
         email_password = 'ireplytosongs'  # os.environ.get('EMAIL_PASS')
         try:
             driver.find_element_by_xpath('//*[@id="application"]/main/div[1]/div[3]/a/span').click()  #FIND FIRST SONG
-            email_address = 'songreplier@gmail.com'   #os.environ.get('EMAIL_USER')
-            email_password = 'ireplytosongs' #os.environ.get('EMAIL_PASS')
+            email_address = 'EMAIL HERE'   #os.environ.get('EMAIL_USER')
+            email_password = 'PASSWORD HERE' #os.environ.get('EMAIL_PASS')
         except NoSuchElementException:
             print('HAHA U GOT A NoSuchElementException')
 
